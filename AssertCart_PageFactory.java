@@ -21,7 +21,8 @@ public class AssertCart_PageFactory{
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        driver.get("https://spree-vapasi-prod.herokuapp.com/login");
+       // driver.get("https://spree-vapasi-prod.herokuapp.com/login");
+        driver.get("https://spree-vapasi.herokuapp.com/login");
         LoginPage loginpage =new LoginPage(driver);
         loginpage.login("manasakk15@test.com" , "12345678");
 
@@ -54,9 +55,8 @@ public class AssertCart_PageFactory{
 
         //Enter Billing address in CheckoutPage
         CheckoutPage checkout = new CheckoutPage(driver);
-       checkout.addBillingAddress("xxx","yyy","gm","Bangalore","kar","56567","India","87853673730");
-
-
+       checkout.addBillingAddress("manasa" , "kk" ,
+               "Seattle gm", "Seattle_cvr" , "Seattle","98101","9999900000");
     }
 
 
